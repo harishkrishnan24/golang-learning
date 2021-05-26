@@ -20,7 +20,15 @@ func main() {
 		return
 	}
 
-	var names []byte
+	var total int
+	for _, file := range files {
+		if file.Size() == 0 {
+			total += len(file.Name())
+		}
+	}
+	fmt.Printf("Total required space: %d bytes.\n", total)
+
+	names := make([]byte, 0, total)
 
 	for _, file := range files {
 		if file.Size() == 0 {
