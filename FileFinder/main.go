@@ -44,6 +44,4 @@ func main() {
 		fmt.Println(err)
 		return
 	}
-
-	fmt.Printf("%s", names)
 }

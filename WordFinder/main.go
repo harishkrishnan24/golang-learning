@@ -21,4 +21,8 @@ queries:
 			}
 		}
 	}
+
+	var slice []string
+
+	slice[0] = "ABCD"
 }
